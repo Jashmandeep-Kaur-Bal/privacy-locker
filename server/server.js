@@ -13,6 +13,9 @@ app.use(cors());
 app.use("/uploads", express.static("uploads"));
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("Privacy Locker API is running 🚀");
+});
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/files", require("./routes/fileRoutes"));
 
