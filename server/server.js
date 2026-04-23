@@ -7,7 +7,17 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://privacy-locker-pr1fghe26-jashmandeep-kaur-bals-projects.vercel.app/", // 🔥 replace this
+    ],
+    credentials: true,
+  })
+);
 
 // Static folder (for file downloads)
 app.use("/uploads", express.static("uploads"));
