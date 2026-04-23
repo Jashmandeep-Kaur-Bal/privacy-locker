@@ -15,7 +15,8 @@ app.use(
       "http://localhost:3000",
       "https://privacy-locker-pr1fghe26-jashmandeep-kaur-bals-projects.vercel.app/", // 🔥 replace this
     ],
-    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
